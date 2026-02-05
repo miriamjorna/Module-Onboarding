@@ -12,7 +12,7 @@
       <h1>T-shirt Picker</h1>
     </header>
     <main>
-      <form>
+      <form action="/my-handling-form-page" method="post">
         <!-- write your html here-->
         <!-- 
           try writing out the requirements first as comments
@@ -35,22 +35,33 @@
         1/ log customer name 
         2/ validate customer name: a text string of two characters or more
         -->
-
+ <p>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="user_name" />
+  </p>
         <!--
         3/ log customer email
         4/ validate customer email (format)
         -->
-
+<p>
+    <label for="mail">Email:</label>
+    <input type="email" id="mail" name="user_email" />
+  </p>
         <!--
         5/ offer 3 T-shirt colour choices
         6/ input must pick one
         -->
-
+ <fieldset>
+    <legend>T-shirt colour</legend>
+ </fieldset>
         <!--
         7/ offer 6 sizes: XS, S, M, L, XL, XXL
         8/ input must pick one 
         -->
-        
+ <fieldset>
+    <legend>T-shirt size</legend>
+ </fieldset>       
+
       </form>
     </main>
     <footer>
