@@ -37,7 +37,7 @@
         -->
  <p>
     <label for="name">
-      Name: <input type="text" id="name" min="2" name="user_name" autofocus />
+      Name: <input type="text" id="name" minlength="2" name="user_name" required autofocus />
       </label>
   </p>
         <!--
@@ -46,7 +46,7 @@
         -->
 <p>
     <label for="email">
-      Email: <input type="email" id="email" name="user_email" />
+      Email: <input type="email" id="email" name="user_email" required />
     </label>
   </p>
         <!--
@@ -56,7 +56,7 @@
  <fieldset>
     <legend>T-shirt colour</legend>
     <p>
-      <input type="radio" name="color" id="colour_1" value="blue" />
+      <input type="radio" name="color" id="colour_1" value="blue" required />
       <label for="colour_1">blue</label>
     </p>
     <p>
@@ -75,7 +75,7 @@
  <fieldset>
     <legend>T-shirt size</legend>
     <p>
-      <input type="radio" name="size" id="size_1" value="XS" />
+      <input type="radio" name="size" id="size_1" value="XS" required />
       <label for="size_1">XS</label>
     </p>
     <p>
@@ -98,7 +98,7 @@
       <label for="size_6">XXL</label>
     </p>
  </fieldset>  
- <p></p>     
+ <p>&nbsp;</p>     
 <input type="submit" value="Submit">
 <input type="reset" value="Reset">
       </form>
