@@ -37,7 +37,8 @@
         -->
  <p>
     <label for="name">
-      Name: <input type="text" id="name" minlength="2" name="user_name" required autofocus />
+      Name: <input type="text" id="name" minlength="2" name="user_name" 
+      pattern="[A-Za-z]{2}" title="At least two letters are needed" required autofocus />
       </label>
   </p>
         <!--
@@ -56,50 +57,66 @@
  <fieldset>
     <legend>T-shirt colour</legend>
     <p>
-      <input type="radio" name="color" id="colour_1" value="blue" required />
-      <label for="colour_1">blue</label>
+      <label>
+      <input type="radio" name="color" value="blue" required /> blue
+    </label>
     </p>
     <p>
-      <input type="radio" name="color" id="colour_2" value="black" />
-      <label for="colour_2">black</label>
+      <label>
+      <input type="radio" name="color" value="black" /> black
+      </label>
     </p>
     <p>
-      <input type="radio" name="color" id="colour_3" value="purple" />
-      <label for="colour_3">purple</label>
+      <label>
+      <input type="radio" name="color" value="purple" /> purple
+      </label>
     </p>
  </fieldset>
         <!--
         7/ offer 6 sizes: XS, S, M, L, XL, XXL
         8/ input must pick one 
         -->
- <fieldset>
-    <legend>T-shirt size</legend>
-    <p>
+  <fieldset>
+  <legend>T-shirt size</legend>
+    <table>
+    <tr padding="30px">
+      <td>
       <input type="radio" name="size" id="size_1" value="XS" required />
       <label for="size_1">XS</label>
-    </p>
-    <p>
-      <input type="radio" name="size" id="size_2" value="S" />
-      <label for="size_2">S</label>
-    </p>
-    <p>
-      <input type="radio" name="size" id="size_3" value="M" />
-      <label for="size_3">M</label>
-    </p><p>
+      </td>
+      <td>&nbsp; &nbsp;</td>
+      <td>
       <input type="radio" name="size" id="size_4" value="L" />
       <label for="size_4">L</label>
-    </p>
-    <p>
+      </td>
+    </tr> 
+    <tr>
+      <td>
+      <input type="radio" name="size" id="size_2" value="S" />
+      <label for="size_2">S</label>
+    </td>
+    <td>&nbsp; &nbsp;</td>
+    <td>
       <input type="radio" name="size" id="size_5" value="XL" />
       <label for="size_5">XL</label>
-    </p>
-    <p>
+    </td>
+    </tr>
+    <tr>
+      <td>
+      <input type="radio" name="size" id="size_3" value="M" />
+      <label for="size_3">M</label>
+      </td>
+      <td>&nbsp; &nbsp;</td>
+      <td>
       <input type="radio" name="size" id="size_6" value="XXL" />
       <label for="size_6">XXL</label>
-    </p>
- </fieldset>  
+      </td>
+    </tr> 
+  </table>  
+</fieldset>
+
  <p>&nbsp;</p>     
-<input type="submit" value="Submit">
+<input type="submit" value="SUBMIT"> &nbsp;
 <input type="reset" value="Reset">
       </form>
     </main>
