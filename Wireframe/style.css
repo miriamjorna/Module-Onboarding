@@ -49,35 +49,21 @@ header {
   text-align: center; 
 }
 
+/* ====== Articles Grid Layout ====
+Setting the rules for how articles are placed in the main element.
+Inspect this in Devtools and click the "grid" button in the Elements view
+Play with the options that come up.
+https://developer.chrome.com/docs/devtools/css/grid
+https://gridbyexample.com/learn/
+*/
+
 main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space);
   max-width: var(--container);
   margin: 0 auto calc(var(--space) * 4) auto;
-  padding-bottom: 70px;  /* same as footer height */
-}
-
-table {
-  font-family: Arial, Helvetica, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
-}
-
-td, th {
-  border: 1px solid #ddd;
-  padding: 8px;
-}
-
-tr:nth-child(even){background-color: #f2f2f2;}
-
-tr:hover {background-color: #ddd;}
-
-td:first-child {width: 50%;}
-
-th {
-  padding-top: 12px;
-  padding-bottom: 12px;
-  text-align: left;
-  background-color: #04aa6d;
-  color: white;
+  padding-bottom: 80px;  /* same as footer height */
 }
 
 footer {
@@ -89,20 +75,9 @@ footer {
   text-align: center;
   background-color: #04aa6d;
 }
-/* ====== Articles Grid Layout ====
-Setting the rules for how articles are placed in the main element.
-Inspect this in Devtools and click the "grid" button in the Elements view
-Play with the options that come up.
-https://developer.chrome.com/docs/devtools/css/grid
-https://gridbyexample.com/learn/
-*/
-main {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--space);
-}
 
-main > *:first-child {
+/* First article spans full width */
+main > article:first-child {
   grid-column: span 2;
 }
 /* ====== Article Layout ====== 
